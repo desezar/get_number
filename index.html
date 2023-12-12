@@ -12,7 +12,7 @@
 			const container = document.getElementById('div_counter')
 
 			let counter = 0;
-			while (counter < 100) {
+			while (counter < need) {
 				rand = parseFloat((Math.random() * (20 - 1) + 1).toFixed(2))
 				if ((counter + rand) > need) {
 					rand = parseFloat((need - counter).toFixed(2))
