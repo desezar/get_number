@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Get random</title>
+	<script type="text/javascript" >
+		window.addEventListener('load', function () {
+
+		  	const urlParams = new URLSearchParams(window.location.search);
+			const need = parseFloat(urlParams.get('number'));
+			const container = document.getElementById('div_counter')
+
+			let counter = 0;
+			while (counter < 100) {
+				rand = parseFloat((Math.random() * (20 - 1) + 1).toFixed(2))
+				if ((counter + rand) > need) {
+					rand = parseFloat((need - counter).toFixed(2))
+					
+				}
+				counter += rand
+				container.append(rand + ' + ')
+				console.log(rand, '+')	
+			}
+		})
+		
+		
+		
+
+	</script>
+</head>
+<body>
+	<div id="div_counter"></div>
+</body>
+</html>
